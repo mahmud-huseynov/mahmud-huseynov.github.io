@@ -215,7 +215,7 @@
     <span class="name">Mahmud Huseynov</span>
     <nav aria-label="Secties">
       <a href="#stages">Stages</a>
-      <a href="#projects">Projecten</a>
+      <a href="#projects">Schoolprojecten</a>
       <a href="#approach">Werkwijze</a>
       <a href="#skills">Vaardigheden</a>
       <a href="#education">Opleiding</a>
@@ -229,14 +229,14 @@
   <div class="intro">
     <div class="wrap">
       <p class="eyebrow">Student Bachelor ICT · Fontys Hogeschool · Tilburg</p>
-      <h1>Ik bouw software voor echte gebruikers en test of het werkt.</h1>
-      <p class="lead">Ik studeer ICT aan Fontys met als focus software engineering. Ik heb twee software-stages gedaan, de laatste bij Easyflex in een productieapplicatie met Laravel en Vue.js. Daarnaast bouwde ik zelf een full-stack platform met Spring Boot en React, werkte ik mee aan een full-stack teamproject en maakte ik een game in Unity.</p>
-      <p>Ik zoek een afstudeerstage als full-stack developer.</p>
+      <h1>Ik bouw software voor echte gebruikers en onderbouw mijn keuzes.</h1>
+      <p class="lead">Ik studeer ICT aan Fontys met als focus software engineering. In twee stages en drie schoolprojecten deed ik gebruikersonderzoek, legde ik ontwerpkeuzes vast in architectuurbeslissingen en bouwde ik full-stack functies met geautomatiseerde tests. Bij Easyflex deed ik dat in een productieapplicatie met Laravel en Vue.js.</p>
+      <p>Ik ben een technerd zonder oogkleppen: naast de code kijk ik naar wat gebruikers en het bedrijf nodig hebben. Ik zoek een afstudeerstage als full-stack developer en wil doorgroeien naar een rol waarin ik ook de architectuur van een systeem mee bepaal.</p>
       <span class="status"><span class="dot" aria-hidden="true"></span>Beschikbaar voor een afstudeerstage vanaf februari 2027</span>
 
       <ul class="quick" aria-label="Kerncijfers">
         <li><strong>10</strong><span>Eindcijfer voor mijn stage bij Easyflex</span></li>
-        <li><strong>3 van 12</strong><span>User stories van mij live in productie bij Easyflex</span></li>
+        <li><strong>12</strong><span>User stories die ik bij Easyflex verfijnde en bouwde</span></li>
         <li><strong>168</strong><span>Geautomatiseerde tests die ik schreef bij Easyflex</span></li>
       </ul>
     </div>
@@ -260,18 +260,16 @@
 
         <dl class="facts">
           <dt>Doel</dt>
-          <dd><p>Gebruikers kiezen zelf welke blokken ze op hun dashboard zien en in welke volgorde, en kunnen vanuit een blok direct iets doen. Mijn hoofdvraag: hoe ontwerp en bouw je zo'n dashboard, zodat gebruikers sneller bij hun informatie komen en er direct op kunnen handelen?</p></dd>
+          <dd><p>Gebruikers richten hun dashboard zelf in: ze kiezen welke blokken ze zien en in welke volgorde, en handelen vanuit een blok direct een taak af. Mijn hoofdvraag: hoe ontwerp en bouw je zo'n dashboard, zodat gebruikers sneller bij hun informatie komen en er direct op kunnen handelen?</p></dd>
 
           <dt>Mijn rol</dt>
-          <dd><p>Full-stack developer in het Scrum-team. Ik deed het gebruikersonderzoek, verfijnde samen met de product owner 12 user stories met acceptatiecriteria en bouwde ze zelf, van back end tot front end.</p></dd>
+          <dd><p>Full-stack developer in het Scrum-team. Ik deed het gebruikersonderzoek, verfijnde samen met de product owner 12 user stories met acceptatiecriteria, bouwde ze van back end tot front end en testte ze met 168 geautomatiseerde tests. Het QA-team testte mijn stories tegen de acceptatiecriteria, en de product owner keurde het ontwerp goed.</p></dd>
 
           <dt>Aanpak en keuzes</dt>
           <dd>
             <ul>
-              <li>Onderzocht wat gebruikers op hun dashboard nodig hebben: drie interviews (twee consultants van Easyflex en een externe klant), een analyse van het huidige dashboard en een poll tijdens een klantwebinar.</li>
-              <li>Keuze: één lijst-element met een instelbaar type, in plaats van een apart bloktype per lijst. Daardoor zijn nieuwe lijsten, zoals een lijst met flexwerkers, snel te maken en blijft de look gelijk.</li>
-              <li>De keuzes vastgelegd in een technisch ontwerp met C4-model (een standaardmanier om architectuur in lagen te tekenen) en zes architectuurbeslissingen (ADR's).</li>
-              <li>Getest met PHPUnit, Vitest en Playwright. Gewerkt in Scrum met Jira en een feature branch per ticket. Elk ticket ging eerst door code review en daarna naar het QA-team, dat het testte tegen de acceptatiecriteria. De code volgde de vaste PHP-standaarden (PSR).</li>
+              <li>Onderzoek: drie interviews en een poll met 14 stemmen van klanten. Gebruikers willen vooral direct kunnen handelen vanuit hun dashboard; taken en ziekmeldingen stonden bovenaan.</li>
+              <li>Ontwerp: één lijst-element met een instelbaar type, opgeslagen in de bestaande dashboardtabellen. Zo zijn nieuwe lijsten snel toe te voegen, zonder nieuwe tabellen. De keuzes legde ik vast in een C4-model en zes architectuurbeslissingen (ADR's).</li>
             </ul>
           </dd>
 
@@ -285,22 +283,12 @@
 
           <dt>Resultaat</dt>
           <dd>
-            <p>Stage afgesloten met een 10. Bij de eindpresentatie in juni 2026 draaide het dashboard in productie.</p>
-            <ul>
-              <li>Van de 12 user stories waren er aan het eind 3 door het QA-team goedgekeurd en live: het lijst-element (release 4.30), het takenoverzicht (release 4.31) en de filters op het takenblok. Daarnaast ging mijn bugfix voor de kolomkoppen live in release 4.33.</li>
-              <li>Van de overige stories lagen er 4 bij het QA-team en 4 in code review; twee daarvan kwamen pas in week 16 bij de scope. Eén story, een herontwerp van de lay-out, haalde de product owner uit de scope.</li>
-            </ul>
-            <p>De antwoorden op de vier deelvragen:</p>
-            <ul>
-              <li>Wat gebruikers nodig hebben: een compact dashboard met directe acties en eigen instellingen. Taken, ziekmeldingen en plaatsingen zonder uren kwamen het sterkst naar voren; in de webinarpoll koos 8 van de 14 klanten ziekmeldingen.</li>
-              <li>Hoe de blokken eruitzien: kaarten op een vast grid, met kleur voor urgentie en directe acties, goedgekeurd door de product owner.</li>
-              <li>Hoe je de instellingen veilig opslaat: in de bestaande MySQL-tabellen <code>dashboards</code> (het persoonlijke dashboard van een gebruiker) en <code>dashboard_blocks</code> (een rij per blok, met de blokinstellingen als JSON), via Laravel-endpoints met autorisatie.</li>
-              <li>Of het voldoet aan de kwaliteitseisen: ja, de kern is door het QA-team goedgekeurd, met 168 geautomatiseerde tests die ik schreef (35 PHPUnit, 133 Vitest) en statische analyse in de pipeline.</li>
-            </ul>
+            <p>Stage afgesloten met een 10. Bij de eindpresentatie in juni 2026 draaide de kern van het dashboard in productie: het lijst-element, het takenoverzicht waarin je de status direct aanpast, en de filters op het takenblok. Gebruikers richten daarmee hun eigen dashboard in en handelen taken af zonder het dashboard te verlaten.</p>
+            <p>Van de overige stories lagen er aan het eind van mijn stage 4 bij het QA-team en 4 in code review; één story haalde de product owner uit de scope.</p>
           </dd>
 
           <dt>Reflectie</dt>
-          <dd><p>Na mijn eerste interview merkte ik dat ik sneller had moeten doorvragen naar concrete voorbeelden. Voor de volgende interviews bereidde ik per onderwerp doorvraagvragen voor. Verder leerde ik werken in een gedeelde productiecodebase, waar elke wijziging door review en QA gaat, en wensen kritisch te filteren voordat ze een user story worden.</p></dd>
+          <dd><p>In mijn eerste interview vroeg ik te weinig door naar concrete voorbeelden; voor de volgende interviews bereidde ik per onderwerp doorvraagvragen voor. In mijn afstudeerstage doe ik dat vanaf het eerste gesprek. Ook neem ik mee dat ik wensen eerst samen met de product owner filter, voordat ze een user story worden.</p></dd>
 
           <dt>Technieken</dt>
           <dd class="stack">Laravel · PHP · MySQL · Vue.js · TypeScript · Docker · Figma · Jira · PHPUnit · Vitest · Playwright · Scrum</dd>
@@ -325,16 +313,13 @@
           <dd><p>Een webapp die per engineeringproject laat zien welke wetten gelden. De Excel-versie raakte verouderd bij wetswijzigingen, en Pharius, de bestaande compliancesoftware, bevat wel alle wetten maar geen vragenlijst die laat zien welke voor een project gelden.</p></dd>
 
           <dt>Mijn rol</dt>
-          <dd><p>Ik verzamelde de requirements en bouwde het prototype, van database tot interface.</p></dd>
+          <dd><p>Ik verzamelde de requirements, ontwierp en bouwde het prototype van database tot interface, en testte het met unit tests en een praktijktest door mijn stagebegeleider.</p></dd>
 
           <dt>Aanpak en keuzes</dt>
           <dd>
             <ul>
-              <li>Requirements verzameld via interviews met stakeholders en een analyse van de bestaande Excel-modellen. Meerdere stakeholders noemden een webapplicatie een goed idee.</li>
-              <li>Keuze: een eigen tool in plaats van alleen Excel of alleen Pharius. De Navigator zit daartussen: een vragenlijst die alleen de wetten toont waar een project actie op moet ondernemen.</li>
-              <li>Voor het bouwen een flowchart, een databaseontwerp en wireframes in Figma gemaakt. Met de wireframes haalde ik feedback op voordat ik ging programmeren.</li>
-              <li>Filterbare compliance-overzichten met export naar CSV en pdf, plus een beheerdersgedeelte.</li>
-              <li>Overdrachtsdocumentatie opgeleverd: een handleiding voor gebruikers en een README voor het volgende team.</li>
+              <li>Requirements uit interviews met stakeholders en een analyse van de Excel-modellen. Keuze: een eigen tool tussen Excel en Pharius in, met een vragenlijst die alleen de wetten toont waar een project actie op moet ondernemen.</li>
+              <li>Vóór het bouwen maakte ik een flowchart, een databaseontwerp en wireframes in Figma. Met de wireframes haalde ik feedback op voordat ik ging programmeren.</li>
             </ul>
             <figure class="shot"><img src="images/tebodin-flowchart.png" width="843" height="705" style="max-width: 420px" alt="Flowchart van het prototype: de gebruiker beantwoordt per vraag waar of onwaar, bij onwaar komt er een actiepunt bij, en als alle vragen beantwoord zijn kiest de gebruiker een projectfase en volgt een rapport" loading="lazy"><figcaption>Mijn flowchart voor het prototype, gemaakt vóór het bouwen: van vragenlijst tot rapport per projectfase.</figcaption></figure>
           </dd>
@@ -343,14 +328,13 @@
           <dd>
             <ul>
               <li>Stakeholders reageerden laat of niet. Ik legde dat voor aan mijn stagebegeleider en daarna was het opgelost.</li>
-              <li>Node.js/Express en MongoDB (een database zonder vaste tabellen) waren nieuw voor mij. Die leerde ik tijdens de stage.</li>
               <li>Na feedback halverwege meldde ik vertragingen en voortgang eerder, zonder dat iemand ernaar hoefde te vragen, en maakte ik mijn presentaties begrijpelijker voor mensen zonder achtergrondkennis.</li>
             </ul>
           </dd>
 
           <dt>Resultaat</dt>
           <dd>
-            <p>Een werkend prototype met een React-front-end, een Node.js/Express-back end en MongoDB, dat de wetgeving uit Pharius inleest. Volgens mijn eigen inschatting in het eindverslag dekt het ongeveer 90% van de functies uit de opdracht, waar minimaal 80% werd gevraagd. Alleen het volledig automatisch bepalen van compliance zit er niet in.</p>
+            <p>Een werkend prototype met een React-front-end, een Node.js/Express-back end en MongoDB, dat de wetgeving uit Pharius inleest, met filterbare overzichten, export naar CSV en pdf, een beheerdersgedeelte en overdrachtsdocumentatie voor het volgende team. Volgens mijn eigen inschatting in het eindverslag dekt het ongeveer 90% van de functies uit de opdracht, waar minimaal 80% werd gevraagd. Alleen het volledig automatisch bepalen van compliance zit er niet in.</p>
             <ul>
               <li>Unit tests met Vitest op de drie kernonderdelen: de vragenlijst, het TCN-overzicht en de compliancelijst.</li>
               <li>Mijn stagebegeleider testte het prototype in de praktijk: het werkte zoals bedoeld. Zijn verbeterpunt was dat de interface meer vormgeving en kleur kon gebruiken.</li>
@@ -359,7 +343,7 @@
           </dd>
 
           <dt>Reflectie</dt>
-          <dd><p>Achteraf had ik stakeholders en begeleiders eerder bij de ontwerpfase moeten betrekken. Ook had ik meer tijd moeten inplannen om met meerdere gebruikers te testen; nu testte alleen mijn stagebegeleider het prototype.</p></dd>
+          <dd><p>Volgende keer betrek ik stakeholders en begeleiders al in de ontwerpfase, en plan ik vanaf het begin tijd in om met meerdere gebruikers te testen; nu testte alleen mijn stagebegeleider het prototype. Vertragingen meld ik direct, zoals ik na de feedback halverwege ook ben gaan doen.</p></dd>
 
           <dt>Technieken</dt>
           <dd class="stack">React · TypeScript · Bootstrap · Node.js · Express · MongoDB · Vitest · Figma</dd>
@@ -374,8 +358,8 @@
   <!-- ================= PROJECTEN ================= -->
   <section id="projects">
     <div class="wrap">
-      <h2>Projecten</h2>
-      <p class="section-note">Een individueel full-stack project, een teamproject voor een opdrachtgever en een teamgame voor Fontys.</p>
+      <h2>Schoolprojecten</h2>
+      <p class="section-note">Drie projecten uit mijn opleiding bij Fontys: een individueel full-stack project, een teamproject voor een opdrachtgever en een teamgame.</p>
 
       <h3 class="group-title">Web (full stack)</h3>
 
@@ -401,11 +385,9 @@
           <dt>Aanpak en keuzes</dt>
           <dd>
             <ul>
-              <li>Back end in lagen: controllers, use cases en repositories, met aparte request- en response-objecten en validators. Zo staat de businesslogica los van de web- en databasecode en is die apart te testen.</li>
-              <li>Inloggen via Spring Security met JWT: een accesstoken dat 30 minuten geldig is en een refreshtoken van 30 dagen dat in de database staat. Een uitgelekt accesstoken is zo slechts kort bruikbaar, terwijl de gebruiker toch ingelogd blijft. Rollen voor leerling, tutor en beheerder bepalen wie de beheerfuncties voor leerlingen, tutors en talen mag gebruiken.</li>
-              <li>Live chat met WebSockets en STOMP. STOMP geeft vaste adressen voor de publieke chatroom en voor privéberichten per gebruiker, en SockJS valt terug op een andere verbinding als een netwerk WebSockets blokkeert. Berichten worden ook in de database opgeslagen.</li>
-              <li>MySQL met acht versiebeheerde Flyway-migraties en API-documentatie met OpenAPI (Swagger).</li>
-              <li>Front end in React met Vite, Material UI, React Router en Axios.</li>
+              <li>Back end in lagen (controllers, use cases, repositories), zodat de businesslogica los van web- en databasecode te testen is.</li>
+              <li>Inloggen met JWT: een accesstoken van 30 minuten en een refreshtoken van 30 dagen. Een uitgelekt token is zo slechts kort bruikbaar, terwijl de gebruiker ingelogd blijft. Rollen bepalen wie de beheerfuncties mag gebruiken.</li>
+              <li>Live chat met WebSockets en STOMP, met vaste adressen voor de chatroom en voor privéberichten per gebruiker.</li>
             </ul>
           </dd>
 
@@ -413,15 +395,14 @@
           <dd>
             <ul>
               <li>In de eerste versie van de chat konden privéberichten de ontvanger niet bereiken. De client luisterde op zijn gebruikersnaam, maar de server stuurde het bericht naar het id van de ontvanger, op een adres (<code>/queue</code>) waarvoor de message broker niet was ingesteld. Ik zette de chat opnieuw op met één adresschema op basis van gebruikersnamen: privéberichten op <code>/user/{naam}/private</code>, de chatroom op <code>/chatroom/public</code>, en de broker ingesteld voor allebei. De aparte chatroomtabel en de bijbehorende services konden daardoor weg.</li>
-              <li>Ik richtte het dekkingsrapport (JaCoCo) op de logica door domein- en persistenceklassen uit te sluiten, en schreef daarna gerichte tests voor inloggen, tokens, security en foutafhandeling.</li>
             </ul>
           </dd>
 
           <dt>Resultaat</dt>
-          <dd><p>Een werkende applicatie met 145 tests in 43 testklassen in de back end (unit-, controller- en repositorytests met JUnit 5, Mockito en H2). Alle tests slagen, en JaCoCo meet 89% regeldekking en 72% branchdekking op de code met logica. Over alle klassen, inclusief de dataklassen zonder logica, is de regeldekking 86%. Daarnaast end-to-end tests met Cypress in de front end en een GitLab-pipeline die bouwt, test, de dekking meet, SonarQube draait en een Docker-image publiceert.</p></dd>
+          <dd><p>Een werkende applicatie met 145 back-endtests in 43 testklassen, die allemaal slagen: 89% regeldekking op de code met logica, 86% over alle klassen. Daarnaast end-to-end tests met Cypress en een GitLab-pipeline die bouwt, test, SonarQube draait en een Docker-image publiceert.</p></dd>
 
           <dt>Reflectie</dt>
-          <dd><p>Na de oplevering bleek de chat buiten de beveiliging te vallen: de chatgeschiedenis was zonder inloggen op te vragen, iemand kon de privéberichten van een ander volgen, en de afzender van een bericht was niet gegarandeerd. In november 2026 heb ik dat opgelost. De WebSocket-verbinding controleert nu de JWT, de afzender komt uit het token, en gebruikers kunnen alleen hun eigen gesprekken lezen en volgen. Twaalf nieuwe tests en een controle tegen de draaiende app bevestigen dat.</p></dd>
+          <dd><p>Na de oplevering bleek de chat buiten de beveiliging te vallen: de chatgeschiedenis was zonder inloggen op te vragen, iemand kon de privéberichten van een ander volgen, en de afzender van een bericht was niet gegarandeerd. In november 2026 heb ik dat opgelost. De WebSocket-verbinding controleert nu de JWT, de afzender komt uit het token, en gebruikers kunnen alleen hun eigen gesprekken lezen en volgen. Twaalf nieuwe tests en een controle tegen de draaiende app bevestigen dat. Bij nieuwe functies neem ik beveiliging nu vanaf het ontwerp mee, ook voor realtime verbindingen.</p></dd>
 
           <dt>Technieken</dt>
           <dd class="stack">Java · Spring Boot · Spring Security · JWT · WebSockets · JPA · MySQL · Flyway · OpenAPI · React · Vite · Material UI · JUnit 5 · Mockito · Cypress · JaCoCo · SonarQube · Docker · GitLab CI</dd>
@@ -458,7 +439,7 @@
           <dd><p>De statistiekenpagina opgeleverd in juni 2024, met unit tests op de telling. Twee tegels op het dashboard, voor doorgestuurde chats en chats zonder medewerker, kregen voor het einde van het project geen back end meer.</p></dd>
 
           <dt>Reflectie</dt>
-          <dd><p>Trefwoorden missen synoniemen en tikfouten, en matchen ook binnen andere woorden. Nu zou ik op hele woorden matchen en de lijst bijwerken zodra een FAQ verandert.</p></dd>
+          <dd><p>Trefwoorden missen synoniemen en tikfouten, en matchen ook binnen andere woorden. Volgende keer match ik op hele woorden, werk ik de lijst bij zodra een FAQ verandert, en maak ik onderdelen af voordat ik nieuwe toevoeg.</p></dd>
 
           <dt>Technieken</dt>
           <dd class="stack">Java · Spring Boot · React · Chart.js · Cypress · GitLab CI</dd>
@@ -474,7 +455,7 @@
       <article class="project">
         <div class="project-head">
           <h3>Hack The Pac</h3>
-          <span class="tag">Teamgame · 2025 tot 2026</span>
+          <span class="tag">Teamgame · sep 2025 tot jan 2026</span>
         </div>
         <p class="one-liner">Een Pac-Man-game voor vier spelers in Unity, voor open dagen van Fontys. Bezoekers spelen als Pac-Man of als spook in een teamgevecht en stellen de spelinstellingen in vóór elke ronde.</p>
 
@@ -485,7 +466,7 @@
           <dd><p>Bezoekers laten zien hoeveel er komt kijken bij IT-ontwikkeling, zowel aan tooling als aan keuzes. De game werkt met joystickcontrollers, zodat iedereen kan aanschuiven en spelen.</p></dd>
 
           <dt>Mijn rol</dt>
-          <dd><p>Developer in een team van twee. Ik bouwde de basis van de game: het Unity-project, het level, de besturing, het gedrag van de vier spoken en een computergestuurde Pac-Man. Daarnaast twee spelvarianten, waaronder een chaosmodus met tientallen Pac-Men en spoken tegelijk, en de spelinterface: menu's voor personage en snelheid, een instellingenpaneel met sliders, score, levens, het introscherm en geluid.</p></dd>
+          <dd><p>Developer in een team van twee. Ik bouwde de basis van de game (level, besturing, het gedrag van de spoken en een computergestuurde Pac-Man), twee spelvarianten en de spelinterface met menu's, instellingen, score en geluid.</p></dd>
 
           <dt>Aanpak en keuzes</dt>
           <dd><p>Samen met mijn teamgenoot bedacht ik ideeën voor spelvarianten, onderbouwd met literatuur, een vergelijking met Pac-Man en Pac-Man Vs. en peer reviews. Ontwerpkeuzes testten we met de opdrachtgever.</p></dd>
@@ -497,7 +478,7 @@
           <dd><p>Een speelbaar spel voor vier spelers met joystickcontrollers, in een speelkast. Het is gebruikt op een open dag van Fontys. Bij de overdracht in januari 2026 waren 75 van de 96 acceptatiecriteria klaar. Wat nog ontbreekt, onder meer dat alle vier spelers in de menu's meekiezen, staat in het overdrachtsdocument voor het volgende team, samen met een bedieningshandleiding.</p></dd>
 
           <dt>Reflectie</dt>
-          <dd><p>In het prototype zag ik dat spelers een spelregel pas begrijpen als ze die horen en zien: een hogere snelheid werd pas duidelijk toen het muziektempo meeveranderde, en het samenspel pas met een label boven het eigen personage. Niet alle doelen werden gehaald. Ons advies aan het volgende team was daarom om eerst de ontbrekende functies af te maken, zoals dat alle vier spelers in de menu's meekiezen, voordat er nieuwe ideeën bij komen.</p></dd>
+          <dd><p>Wat ik meeneem: spelers begrijpen een spelregel pas als ze die horen en zien, zoals een sneller muziektempo bij een hogere snelheid. Niet alle doelen werden gehaald; volgende keer maak ik eerst de kern af, zoals dat alle vier spelers in de menu's meekiezen, voordat er nieuwe ideeën bij komen. Dat advies gaven we ook aan het volgende team.</p></dd>
 
           <dt>Technieken</dt>
           <dd class="stack">Unity · C# · Git feature branches</dd>
@@ -540,7 +521,7 @@
   <section id="skills">
     <div class="wrap">
       <h2>Vaardigheden</h2>
-      <p class="section-note">Alleen wat ik heb gebruikt in stages en projecten.</p>
+      <p class="section-note">De techniek die ik heb gebruikt in stages en projecten, en hoe ik werk.</p>
       <div class="skill-groups">
         <div>
           <h3>Programmeertalen en engines</h3>
@@ -604,6 +585,14 @@
             <li>Gebruikersonderzoek</li>
             <li>C4-model</li>
             <li>ADR's</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Persoonlijk</h3>
+          <ul class="chips">
+            <li>Leergierig</li>
+            <li>Stressbestendig</li>
+            <li>Servicegericht</li>
           </ul>
         </div>
         <div>
